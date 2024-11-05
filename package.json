@@ -3,7 +3,9 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "migrate": "bun run src/db/migrate.ts",
+    "start": "bun run src/index.ts"
   },
   "prisma": {
     "seed": "node scripts/seed.js"
