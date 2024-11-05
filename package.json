@@ -3,10 +3,12 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "migrate:dev":"dotenv -e .env.local --prisma migrate dev",
+    "start" : "bun run src/index.ts"
   },
   "prisma": {
-    "seed": "node scripts/seed.js"
+    "seed": "dotenv -e .env.local -- node scripts/seed.js"
   },
   "dependencies": {
     "@elysiajs/swagger": "^1.1.5",
